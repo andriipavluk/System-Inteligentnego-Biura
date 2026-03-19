@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Czujników</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nawigacja -->
+  <nav class="navbar">
+    <h1>Sensor Dashboard</h1>
+    <div class="nav-links">
+      <a href="#">Dashboard</a>
+      <a href="#sensors">Czujniki</a>
+      <a href="#charts">Wykresy</a>
+      <a href="#">Ustawienia</a>
+    </div>
+  </nav>
+
+  <!-- Główna zawartość -->
+  <main>
+
+    <!-- Sekcja Czujników -->
+    <section id="sensors">
+      <h2 class="section-title">Czujniki</h2>
+
+      <div class="dashboard">
+
+        <div class="sensor-card">
+          <div class="sensor-title">Temperatura</div>
+          <div class="sensor-value">22°C</div>
+          <span class="status status-ok">OK</span>
+        </div>
+
+        <div class="sensor-card">
+          <div class="sensor-title">Wilgotność</div>
+          <div class="sensor-value">45%</div>
+          <span class="status status-ok">OK</span>
+        </div>
+
+        <div class="sensor-card">
+          <div class="sensor-title">Czujnik dymu</div>
+          <div class="sensor-value">Wykryto</div>
+          <span class="status status-alarm">ALARM</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sekcja Wykresów -->
+    <section id="charts">
+      <h2 class="section-title">Wykresy</h2>
+
+      <div class="charts-container">
+
+        <div class="sensor-card">
+          <div class="sensor-title">Temperatura - ostatnie 24h</div>
+          <canvas id="tempChart"></canvas>
+        </div>
+
+        <div class="sensor-card">
+          <div class="sensor-title">Wilgotność - ostatnie 24h</div>
+          <canvas id="humidityChart"></canvas>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Stopka -->
+  <footer class="footer">
+    <p>© 2026 Dashboard IoT | System monitorowania czujników</p>
+  </footer>
+
+</body>
+</html>
