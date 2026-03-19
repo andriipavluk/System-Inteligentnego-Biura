@@ -1,0 +1,128 @@
+/* Reset podstawowy */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* ===== NAVIGACJA ===== */
+.navbar {
+  background: #1f2937;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ===== GŁÓWNY DASHBOARD ===== */
+.dashboard {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ===== KARTY CZUJNIKÓW ===== */
+.sensor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-top: 50px;
+  border: 2px solid;
+}
+
+
+
+.sensor-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.sensor-value {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ===== STATUSY ===== */
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  
+}
+
+.status-ok {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-alarm {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===== RESPONSYWNOŚĆ ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    margin-left: 110px;
+    display: inline-block;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .sensor-value {
+    font-size: 24px;
+  }
+}
