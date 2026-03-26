@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Czujników</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
   <!-- Nawigacja -->
   <nav class="navbar">
     <h1>Sensor Dashboard</h1>
@@ -18,62 +18,32 @@
       <a href="#">Ustawienia</a>
     </div>
   </nav>
-
-  <!-- Główna zawartość -->
+  <!-- Głwna zawartość -->
   <main>
-
-    <!-- Sekcja Czujników -->
+    <!-- Sekcja Czujnikw -->
     <section id="sensors">
       <h2 class="section-title">Czujniki</h2>
-
-      <div class="dashboard">
-
-        <div class="sensor-card">
-          <div class="sensor-title">Temperatura</div>
-          <div class="sensor-value">22°C</div>
-          <span class="status status-ok">OK</span>
-        </div>
-
-        <div class="sensor-card">
-          <div class="sensor-title">Wilgotność</div>
-          <div class="sensor-value">45%</div>
-          <span class="status status-ok">OK</span>
-        </div>
-
-        <div class="sensor-card">
-          <div class="sensor-title">Czujnik dymu</div>
-          <div class="sensor-value">Wykryto</div>
-          <span class="status status-alarm">ALARM</span>
-        </div>
-
-      </div>
+      <div id="sensors"></div>
     </section>
-
-    <!-- Sekcja Wykresów -->
+    <!-- Sekcja Wykresw -->
     <section id="charts">
       <h2 class="section-title">Wykresy</h2>
-
       <div class="charts-container">
-
         <div class="sensor-card">
           <div class="sensor-title">Temperatura - ostatnie 24h</div>
           <canvas id="tempChart"></canvas>
         </div>
-
         <div class="sensor-card">
           <div class="sensor-title">Wilgotność - ostatnie 24h</div>
           <canvas id="humidityChart"></canvas>
         </div>
-
       </div>
     </section>
-
   </main>
-
   <!-- Stopka -->
   <footer class="footer">
-    <p>© 2026 Dashboard IoT | System monitorowania czujników</p>
+    <p> 2026 Dashboard IoT  System monitorowania czujnikw</p>
   </footer>
-
+  <script src="app.js"></script>
 </body>
 </html>

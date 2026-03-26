@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel sterowania inteligentnym domem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Czujniki do inteligentnego domu</h1>
+    <div id="sensors"></div>
+    
+    <div class="chart-container">
+        <canvas id="tempChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="humidityChart"></canvas>
+    </div>
+    
+    <div class="forms-section">
+        <h2>Dodaj nowy czujnik</h2>
+        <form id="addSensorForm">
+            <div class="form-group">
+                <label for="sensorName">Nazwa czujnika:</label>
+                <input type="text" id="sensorName" required>
+            </div>
+            <div class="form-group">
+                <label for="sensorType">Typ czujnika:</label>
+                <select id="sensorType" required>
+                    <option value="Temperature">Temperatura</option>
+                    <option value="Humidity">Wilgotność</option>
+                    <option value="Light">Światło</option>
+                    <option value="Motion">Ruch</option>
+                    <option value="Smoke">Dym</option>
+                    <option value="CO2">CO₂</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomId">ID pokoju:</label>
+                <input type="number" id="roomId" required>
+            </div>
+            <button type="submit">Dodaj czujnik</button>
+        </form>
+        
+        <h2>Wyślij odczyt czujnika</h2>
+        <form id="sendReadingForm">
+            <div class="form-group">
+                <label for="readingSensorId">ID sensora:</label>
+                <input type="number" id="readingSensorId" required>
+            </div>
+            <div class="form-group">
+                <label for="readingType">Typ:</label>
+                <select id="readingType" required>
+                    <option value="Temperature">Temperatura</option>
+                    <option value="Humidity">Wilgotność</option>
+                    <option value="Light">Światło</option>
+                    <option value="Motion">Ruch</option>
+                    <option value="Smoke">Dym</option>
+                    <option value="CO2">CO₂</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="readingValue">Wartość:</label>
+                <input type="number" step="0.01" id="readingValue" required>
+            </div>
+            <button type="submit">Wyślij do czytania</button>
+        </form>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
