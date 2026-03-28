@@ -419,3 +419,7 @@ FodyWeavers.xsd
 SmartHomeApi/
 Data/
 Models/
+*.db
+*.db-shm
+*.db-wal
+.idea/
