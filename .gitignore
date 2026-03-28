@@ -439,3 +439,6 @@ Models/
 *.db-shm
 *.db-wal
 .idea/
+SmartHomeAPI/database/
+SmartHomeAPI/frontend/
+SmartHomeAPI/.idea/
