@@ -435,3 +435,7 @@ Models/
 *.db-shm
 *.db-wal
 .idea/
+*.db
+*.db-shm
+*.db-wal
+.idea/
